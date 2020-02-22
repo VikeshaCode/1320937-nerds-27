@@ -1,55 +1,59 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" xmlns:e-mail="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="utf-8">
   <title>Дизайн-студия "Нёрдс"</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
-<header>
-  <nav>
-    <a href="index.html">
+<header class="main-header">
+  <nav class="main-navigation">
+    <a href="index.html" class="main-header-logo">
       <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии Нёрдс" class="nerds-logo"/>
     </a>
-    <ul>
+    <ul class="site-navigation">
       <li><a href="index.html">Студия</a></li>
-      <li><a href="#">Клиенты</a></li>
+      <li><a href="customers.html">Клиенты</a></li>
       <li><a href="inner.html">Магазин</a></li>
-      <li><a href="#">Контакты</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
     </ul>
-    <ul>
+    <ul class="user-navigation">
       <li>
         <img src="img/basket-icon.svg" width="15" height="15" class="basket-icon">
-        <button type="button">Корзина</button>
+        <a href="basket.html">Корзина</a>
       </li>
     </ul>
   </nav>
 </header>
-<main>
-  <h1>Дизайн-студия "Нёрдс"</h1>
+<main class="container">
+  <h1 class="visually-hidden">Дизайн-студия "Нёрдс"</h1>
   <h2>Долго, дорого, скрупулезно.</h2>
   <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
   <input type="button" value="Узнать больше">
   <img src="img/slide-picture.png" width="698" height="413" class="slide-picture">
-  <ul>
-    <li>
+  <ul class="features-list">
+    <li class="feature-item">
       <img src="img/advantage-picture-red.png" width="300" height="146" class="advantage-picture-red">
       <h2>Веб-сайты</h2>
       <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
       <a href="#">Заказать</a>
     </li>
-    <li>
+    <li class="feature-item">
       <img src="img/advantage-picture-green.png" width="300" height="146" class="advantage-picture-green">
       <h2>Приложения</h2>
       <p>Покорите топ-10 приложений в AppStore и Google Play</p>
       <a href="#">Заказать</a>
     </li>
-    <li>
+    <li class="feature-item">
       <img src="img/advantage-picture-yellow.png" width="300" height="146" class="advantage-picture-yellow">
       <h2>Презентации</h2>
       <p>Вы даже не подозреваете, насколько вы изумительны!</p>
       <a href="#">Заказать</a>
     </li>
   </ul>
+  <section class="information">
   <h2>Мы — маленькая, но гордая дизайн-студия из Краснодара.</h2>
   <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук,
     как роботы.</p>
@@ -61,9 +65,15 @@
       <li>Слайдшоу и видео для корпоративных презентаций</li>
     </ul>
   </div>
+  </section>
   <div>
     <img src="img/nerds-picture.jpg" width="360" height="208" class="nerds-picture">
     <h3>с 2004 года Любим точность во всем:</h3>
+    <ul>
+      <li>146% Уровень самоотдачи</li>
+      <li>100% Соблюдение сроков</li>
+      <li>50% Минимальная предоплата</li>
+    </ul>
   </div>
   <div>
     <ul>
@@ -81,42 +91,69 @@
       </li>
     </ul>
   </div>
-  <div>
+  <section class="contacts">
     <h2>NЁRDS DESIGN STUDIO</h2>
     <p>191186, Санкт-Петербург,<br>
       ул. Б. Конюшенная, д. 19/8</p>
     <p>
       <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
     </p>
-  </div>
-  <img src="img/2.png" width="1440" height="416" class="map">
+    <button type="button" class="button">Напишите нам</button>
+  </section>
+  <p>
+  <img src="img/2.png" width="1440" height="416" class="map" alt="Офис компании по адресу ул. Б. Конюшенная, д. 19/8, Санкт-Петербург">
   <img src="img/map-marker.png" width="231" height="190" class="map-marker">
+  </p>
 </main>
-<footer>
-  <ul>
+<footer class="main-footer">
+  <ul class="footer-social">
     <li>
-      <a href="#">
+      <a class="social-button" href="#" aria-label="Вконтакте">
         <img src="img/vk-icon.svg" width="26" height="15" class="vk-icon">
-        Вконтакте
       </a>
     </li>
     <li>
-      <a href="#">
+      <a href="#" aria-label="Фейсбук">
         <img src="img/fb-icon.svg" width="12" height="22" class="fb-icon">
-        Фейсбук
       </a>
     </li>
     <li>
-      <a href="#">
+      <a href="#" aria-label="Инстаграм">
         <img src="img/insta-icon.svg" width="21" height="21" class="insta-icon">
-        Инстаграм
       </a>
     </li>
   </ul>
-  <section>
+  <section class="promo">
     <h2>Давайте дружить, это выгодно!</h2>
     <p>Скидка 10% для друзей из социальных сетей.</p>
   </section>
 </footer>
+
+
+<section class="modal modal-login">
+  <h2>Напишите нам</h2>
+  <form class="login-form" action="#" method="post">
+    <div  class="half-width">
+      <label>
+        <input type="text" name="name" placeholder="Имя Фамилия">
+        Ваше имя:
+      </label>
+    </div>
+    <div  class="half-width">
+      <label>
+        <input type="email" name="email" placeholder="email@example.com">
+        Ваш e-mail:
+      </label>
+    </div>
+    <div>
+      <label>
+        <textarea name="text" rows="5" placeholder="В свободной форме"></textarea>
+        Текст письма:
+      </label>
+    </div>
+    <input type="submit" value="Отправить">
+  </form>
+</section>
+
 </body>
 </html>
