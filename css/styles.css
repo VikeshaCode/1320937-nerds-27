@@ -1,12 +1,6 @@
 @import url(constants.css);
 
-* {
-  box-sizing: border-box;
-}
-
-
 body {
-  margin: 0;
   padding: 0;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
@@ -66,6 +60,11 @@ a {
   text-transform: uppercase;
   line-height: 30px;
 }
+
+.site-navigation a:not(:first-child) {
+  margin-left:45px;
+}
+
 .visually-hidden{
   display: none;
 }
