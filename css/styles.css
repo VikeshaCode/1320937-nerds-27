@@ -36,6 +36,10 @@ body {
   background-color: #efc84a;
 }
 
+.button-grey {
+  background-color:#eeeeee;
+}
+
 a {
   text-decoration: none;
 }
@@ -97,6 +101,7 @@ a {
 }
 
 .header-size-5 {
+  text-transform: uppercase;
   font-size: 18px;
   font-weight: bold;
   line-height: 30px;
@@ -150,6 +155,55 @@ a {
   list-style: none;
 }
 
+.feature-item {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+  color: var(--charcoal-grey);
+}
+
+.slider {
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+}
+.slider-1 {
+  color: #000000;
+}
+.slider-2,
+.slider-3 {
+  color: var(--black-30);
+}
+
+
+a.arrow {
+  display: inline-block;
+  margin: 0 10px;
+  font-size:0;
+}
+
+.arrow::after {
+  display: inline-block;
+  border: 20px solid #000000;
+  border-right-width: 10px;
+  border-right-color: transparent;
+  border-left-width: 10px;
+  border-left-color: transparent;
+  content: ""
+}
+
+.arrow-up::after {
+  border-top-width: 0;
+}
+
+.arrow-down::after {
+  border-bottom-width: 0;
+}
+
+
+
 .modal {
   font: inherit;
   background-color: #ffffff;
@@ -160,3 +214,4 @@ a {
   font-size: 45px;
   line-height: 45px;
 }
+
