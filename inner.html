@@ -5,12 +5,14 @@
   <title>Дизайн-студия "Нёрдс"</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap&subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/new_styles.css" rel="stylesheet">
 </head>
+
+
 <body>
 <header class="main-header">
   <nav class="main-navigation">
-    <a href="index.html" class="main-header-logo">
+    <a class="main-header-logo" href="index.html">
       <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии Нёрдс" class="nerds-logo"/>
     </a>
     <ul class="site-navigation">
@@ -21,102 +23,166 @@
     </ul>
     <ul class="user-navigation">
       <li>
-        <img src="img/basket-icon.svg" width="15" height="15" class="basket-icon">
-        <a href="basket.html">Корзина</a>
+        <a class="user-basket" href="basket.html">Корзина</a>
       </li>
     </ul>
   </nav>
-  <h1 class="header-size-1">Магазин готовых шаблонов</h1>
+  <h1 class="header-size-1 header-inner">Магазин готовых шаблонов</h1>
 </header>
+
+
 <main>
-  <aside>
-    <div>
-      <label for="sum" class="header-size-5">Стоимость:</label>
-      1<input type="range" id="sum" name="sum" min="1" max="15000" step="1">15 000
-    </div>
-    <div>
-      <output name="sum"></output>
-    </div>
+  <div class="catalog-columns">
+    <aside class="filters">
 
-    <div>
-      <h3 class="header-size-5">Сетка:</h3>
-      <input type="radio" id="адаптивная" name="grid" value="адаптивная" checked>
-      <label for="адаптивная" class="feature-item">Адаптивная</label>
-      <input type="radio" id="фиксированная" name="grid" value="фиксированная">
-      <label for="фиксированная" class="feature-item">Фиксированная</label>
-      <input type="radio" id="резиновая" name="grid" value="резиновая">
-      <label for="резиновая" class="feature-item">Резиновая</label>
-    </div>
-    <div>
-      <h3 class="header-size-5">Особенности:</h3>
-      <input type="checkbox" id="слайдер" name="specialities" value="слайдер" checked>
-      <label for="слайдер" class="feature-item">Cлайдер</label>
-      <input type="checkbox" id="блок преимуществ" name="specialities" value="блок преимуществ">
-      <label for="блок преимуществ" class="feature-item">Блок преимуществ</label>
-      <input type="checkbox" id="новости" name="specialities" value="новости" checked>
-      <label for="новости" class="feature-item">Hовости</label>
-      <input type="checkbox" id="Галерея" name="specialities" value="Галерея">
-      <label for="Галерея" class="feature-item">Галерея</label>
-      <input type="checkbox" id="корзина" name="specialities" value="корзина">
-      <label for="корзина" class="feature-item">Корзина</label>
-    </div>
-    <a class="button button-grey" href="#">Показать</a>
-  </aside>
-  <section class="goods">
-    <p class="header-size-5">
-      Сортировать:
-    <ul class="slider">
-      <li class="slider-1">по цене</li>
-      <li class="slider-2">по типу</li>
-      <li class="slider-3">по названию</li>
-    </ul>
-    <a class="arrow arrow-down" href="#">по убыванию</a>
-    <a class="arrow arrow-up" href="#">по возрастанию</a>
-    </p>
-    <ul>
-      <li><img src="img/img-sedona-jpg.jpg" width="360" height="576" class="img-sedonajpg" alt=""></li>
-      <li><img src="img/img-pink-jpg.jpg" width="360" height="576" class="img-pinkjpg" alt=""></li>
-      <li><img src="img/img-barbershop-jpg.jpg" width="360" height="576" class="img-barbershopjpg" alt=""></li>
-      <li><img src="img/img-mishka-jpg.jpg" width="360" height="576" class="img-mishkajpg" alt=""></li>
-      <li><img src="img/img-aplus-jpg.jpg" width="360" height="576" class="img-aplusjpg" alt=""></li>
-      <li><img src="img/img-kvast-jpg.jpg" width="360" height="576" class="img-kvastjpg" alt=""></li>
-    </ul>
-  </section>
-  <div>
-    <button type="button" class="button button-grey">1</button>
-    <button type="button" class="button button-grey">2</button>
-    <button type="button" class="button button-grey">3</button>
-    <button type="button" class="button button-grey">Следующая</button>
+      <div>
+        <h3 class="header-size-5">Стоимость:</h3>
+        <div class="filter-price">
+          <img class="filter-button" src="img/filter-button.png" width="20px"
+               height="23px">
+          <div class="filter-div-green"></div>
+          <img class="filter-button" src="img/filter-button.png" width="20px"
+               height="23px">
+          <div class="filter-div-grey"></div>
+        </div>
+        <!--        <label for="sum" class="header-size-5">Стоимость:</label>-->
+        <!--        1<input type="range" id="sum" name="sum" min="1" max="15000" step="1">15 000-->
+      </div>
 
+      <div class="price-field">
+        <div class="price-form">
+          <span class="text-4">от</span>
+          <div class="small-form">0</div>
+        </div>
+        <div class="price-form">
+          <span class="text-4">до</span>
+          <div class="small-form">15000</div>
+        </div>
+      </div>
+
+          <div>
+            <h3 class="header-size-5">Сетка:</h3>
+            <ul class="filter">
+              <li class="filter-option">
+                <input class="filter-input filter-input-radio" type="radio" id="адаптивная" name="grid"
+                       value="адаптивная"
+                       checked>
+                <label for="адаптивная" class="feature-item">Адаптивная</label>
+              </li>
+              <li class="filter-option">
+                <input class="filter-input filter-input-radio" type="radio" id="фиксированная" name="grid"
+                       value="фиксированная">
+                <label for="фиксированная" class="feature-item">Фиксированная</label>
+              </li>
+              <li class="filter-option">
+                <input class="filter-input filter-input-radio" type="radio" id="резиновая" name="grid"
+                       value="резиновая">
+                <label for="резиновая" class="feature-item">Резиновая</label>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="header-size-5">Особенности:</h3>
+            <ul class="filter">
+              <li class="filter-option">
+                <input class="filter-input" type="checkbox" id="слайдер" name="specialities" value="слайдер" checked>
+                <label for="слайдер" class="feature-item">Cлайдер</label>
+              </li>
+              <li class="filter-option">
+                <input type="checkbox" id="блок преимуществ" name="specialities" value="блок преимуществ">
+                <label for="блок преимуществ" class="feature-item">Блок преимуществ</label>
+              </li>
+              <li class="filter-option">
+                <input type="checkbox" id="новости" name="specialities" value="новости" checked>
+                <label for="новости" class="feature-item">Hовости</label>
+              </li>
+              <li class="filter-option">
+                <input type="checkbox" id="Галерея" name="specialities" value="Галерея">
+                <label for="Галерея" class="feature-item">Галерея</label>
+              </li>
+              <li class="filter-option">
+                <input type="checkbox" id="корзина" name="specialities" value="корзина">
+                <label for="корзина" class="feature-item">Корзина</label>
+              </li>
+            </ul>
+          </div>
+          <a class="button button-grey" href="#">Показать</a>
+    </aside>
+
+    <section class="goods">
+
+      <div class="sort-container">
+        <p class="header-size-5">Сортировать:</p>
+        <ul class="slider">
+          <li class="slider-1">по цене</li>
+          <li class="slider-2">по типу</li>
+          <li class="slider-3">по названию</li>
+          <div class="icon-up-down">
+            <a class="slider-4" href="#">
+              <img class="icon-down-dir" src="img/icon-down-dir.svg" width="11" height="10"></a>
+            <a class="slider-5" href="#">
+              <img class="icon-up-dir" src="img/icon-up-dir.svg" width="11" height="10"></a>
+          </div>
+        </ul>
+      </div>
+
+      <ul class="catalog-list">
+        <li><img src="img/img-sedona-jpg.jpg" width="360" height="576" class="catalog-item img-sedonajpg" alt=""></li>
+        <li><img src="img/img-pink-jpg.jpg" width="360" height="576" class="catalog-item img-pinkjpg" alt=""></li>
+        <li><img src="img/img-barbershop-jpg.jpg" width="360" height="576" class="catalog-item img-barbershopjpg"
+                 alt=""></li>
+        <li><img src="img/img-mishka-jpg.jpg" width="360" height="576" class="catalog-item img-mishkajpg" alt=""></li>
+        <li><img src="img/img-aplus-jpg.jpg" width="360" height="576" class="catalog-item img-aplusjpg" alt=""></li>
+        <li><img src="img/img-kvast-jpg.jpg" width="360" height="576" class="catalog-item img-kvastjpg" alt=""></li>
+      </ul>
+
+      <div class="paginator">
+        <a class="current" href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">Следующая</a>
+      </div>
+    </section>
   </div>
+
+
   <section class="contacts">
-    <h2 class="header-size-5">NЁRDS DESIGN STUDIO</h2>
-    <p class="text-2 text-2_grey">191186, Санкт-Петербург,<br>
-      ул. Б. Конюшенная, д. 19/8</p>
-    <p class="text-2 text-2_grey">
-      <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
-    </p>
-    <button class="button button-red" type="button">Напишите нам</button>
+    <div class="info">
+      <h2 class="header-size-5">NЁRDS DESIGN STUDIO</h2>
+      <p class="text-2 text-2_grey">191186, Санкт-Петербург,<br>
+        ул. Б. Конюшенная, д. 19/8</p>
+      <p>
+        <a class="text-2 text-2_grey" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+      </p>
+      <button class="button button-red" type="button">Напишите нам</button>
+    </div>
+    <img class="map-marker" src="img/map-marker.png" width="231" height="190">
   </section>
-  <img src="img/2.png" width="1440" height="416" class="map ">
-  <img src="img/map-marker.png" width="231" height="190" class="map-marker">
+
 </main>
-<footer>
-  <ul>
-    <li>
-      <a class="social-button" href="#" aria-label="Вконтакте">
-        <img src="img/vk-icon.svg" width="26" height="15" class="vk-icon">
-      </a>
+
+<footer class="main-footer">
+  <ul class="footer-social">
+    <li class="social-list">
+      <div class="social-button-icon">
+        <a class="social social-vk" href="#" aria-label="Вконтакте">
+          <img class="icon vk-icon" src="img/vk-icon.svg" width="26" height="15">
+        </a>
+      </div>
     </li>
     <li>
-      <a class="social-button" href="#" aria-label="Фейсбук">
-        <img src="img/fb-icon.svg" width="12" height="22" class="fb-icon">
-      </a>
+      <div class="social-button-icon">
+        <a class="social social-fb" href="#" aria-label="Фейсбук">
+          <img class="icon fb-icon" src="img/fb-icon.svg" width="12" height="22">
+        </a>
+      </div>
     </li>
     <li>
-      <a class="social-button" href="#" aria-label="Инстаграм">
-        <img src="img/insta-icon.svg" width="21" height="21" class="insta-icon">
-      </a>
+      <div class="social-button-icon">
+        <a class="social social-inst" href="#" aria-label="Инстаграм">
+          <img class="icon insta-icon" src="img/insta-icon.svg" width="21" height="21">
+        </a>
+      </div>
     </li>
   </ul>
   <section class="promo">
@@ -125,30 +191,37 @@
   </section>
 </footer>
 
-<section class="modal modal-login">
+
+<section class="modal">
   <h2>Напишите нам</h2>
   <form class="login-form" action="#" method="post">
-    <div class="half-width">
+    <div class="modal-item">
       <label>
-        <input type="text" name="name" placeholder="Имя Фамилия">
         Ваше имя:
+        <br>
+        <input type="text" name="name" placeholder="Имя Фамилия">
       </label>
     </div>
-    <div class="half-width">
+    <div class="modal-item">
       <label>
-        <input type="email" name="email" placeholder="email@example.com">
         Ваш e-mail:
+        <br>
+        <input type="email" name="email" placeholder="email@example.com">
       </label>
     </div>
-    <div>
+    <div class="modal-item modal-item-big">
       <label>
-        <textarea name="text" rows="5" placeholder="В свободной форме"></textarea>
         Текст письма:
+        <textarea  name="text" rows="5" placeholder="В свободной форме"></textarea>
       </label>
     </div>
-    <input type="submit" value="Отправить">
+    <input class="button button-red button-modal" type="submit" value="Отправить">
+    <button class="modal-close" type="button"></button>
+    <span class="visually-hidden">Закрыть</span>
   </form>
 </section>
+
+
 
 </body>
 </html>

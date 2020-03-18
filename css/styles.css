@@ -1,7 +1,6 @@
 @import url(constants.css);
 
 body {
-  padding: 0;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -22,6 +21,7 @@ body {
   text-transform: uppercase;
   border: none;
   color: white;
+  text-decoration: none;
 }
 
 .button.button-red {
@@ -44,15 +44,39 @@ a {
   text-decoration: none;
 }
 
+.main-header {
+  padding: 49px 140px;
+  background-color:#eeeeee;
+}
 .main-navigation {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-bottom: 49px;
   font-size:16px;
   line-height:1.88;
   color:#000000;
-  background-color:#eeeeee;
+}
+.main-header-logo {
+  width: 160px;
+  height: 65px;
+  order:0;
 }
 
+.site-navigation {
+  margin: 0;
+  padding: 0;
+}
+
+.user-navigation {
+  margin-left:auto;
+  width: 74px;
+}
 .site-navigation,
 .user-navigation {
+  display: flex;
+  flex-direction: row;
   list-style: none;
 }
 
@@ -65,7 +89,7 @@ a {
   line-height: 30px;
 }
 
-.site-navigation a:not(:first-child) {
+.site-navigation li:not(:first-of-type) a {
   margin-left:45px;
 }
 
@@ -140,7 +164,6 @@ a {
 .counter {
   font-size: 45px;
   font-weight: bold;
-  line-height: 10px;
   color: black;
 }
 
@@ -201,8 +224,6 @@ a.arrow {
 .arrow-down::after {
   border-bottom-width: 0;
 }
-
-
 
 .modal {
   font: inherit;
