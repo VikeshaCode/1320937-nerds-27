@@ -9,6 +9,8 @@ body {
   letter-spacing: normal;
   color: var(--black);
   background-color: white;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .button {
@@ -217,6 +219,7 @@ a {
 }
 
 .small-divider {
+  align-self: center;
   width: 2px;
   height: 52px;
   background-color: var(--white-four);
@@ -312,6 +315,7 @@ a {
   list-style: none;
   margin: 46px 140px;
   justify-content: space-between;
+  align-items: center;
 }
 
 .partners-logo {
@@ -752,7 +756,7 @@ a {
 
 .goods {
   width: 800px;
-  margin: 55px 0 0 auto;
+  margin: 0 0 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
 }
