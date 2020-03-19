@@ -5,7 +5,7 @@
   <title>Дизайн-студия "Нёрдс"</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap&subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/new_styles.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
 </head>
 
 
@@ -18,7 +18,7 @@
     <ul class="site-navigation">
       <li><a href="index.html">Студия</a></li>
       <li><a href="customers.html">Клиенты</a></li>
-      <li><a href="inner.html">Магазин</a></li>
+      <li><a class="active-link" href="inner.html">Магазин</a></li>
       <li><a href="contacts.html">Контакты</a></li>
     </ul>
     <ul class="user-navigation">
@@ -34,79 +34,76 @@
 <main>
   <div class="catalog-columns">
     <aside class="filters">
-
       <div>
         <h3 class="header-size-5">Стоимость:</h3>
         <div class="filter-price">
-          <img class="filter-button" src="img/filter-button.png" width="20px"
-               height="23px">
+          <img class="filter-button" src="img/filter-button.png" width="20"
+               height="23" alt="иконка для слайдера цены">
           <div class="filter-div-green"></div>
-          <img class="filter-button" src="img/filter-button.png" width="20px"
-               height="23px">
+          <img class="filter-button" src="img/filter-button.png" width="20"
+               height="23" alt="иконка для слайдера цены">
           <div class="filter-div-grey"></div>
         </div>
-        <!--        <label for="sum" class="header-size-5">Стоимость:</label>-->
-        <!--        1<input type="range" id="sum" name="sum" min="1" max="15000" step="1">15 000-->
       </div>
-
       <div class="price-field">
         <div class="price-form">
-          <span class="text-4">от</span>
-          <div class="small-form">0</div>
+          <label class="text-4" for="min-value">от</label>
+          <input id="min-value" class="small-form" name="min-value" type="number" value="0" min="0" max="15000">
         </div>
         <div class="price-form">
-          <span class="text-4">до</span>
-          <div class="small-form">15000</div>
+          <label class="text-4" for="max-value">до</label>
+          <input id="max-value" class="small-form" name="max-value" type="number" value="15000" min="1" max="15000">
         </div>
       </div>
 
-          <div>
-            <h3 class="header-size-5">Сетка:</h3>
-            <ul class="filter">
-              <li class="filter-option">
-                <input class="filter-input filter-input-radio" type="radio" id="адаптивная" name="grid"
-                       value="адаптивная"
-                       checked>
-                <label for="адаптивная" class="feature-item">Адаптивная</label>
-              </li>
-              <li class="filter-option">
-                <input class="filter-input filter-input-radio" type="radio" id="фиксированная" name="grid"
-                       value="фиксированная">
-                <label for="фиксированная" class="feature-item">Фиксированная</label>
-              </li>
-              <li class="filter-option">
-                <input class="filter-input filter-input-radio" type="radio" id="резиновая" name="grid"
-                       value="резиновая">
-                <label for="резиновая" class="feature-item">Резиновая</label>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="header-size-5">Особенности:</h3>
-            <ul class="filter">
-              <li class="filter-option">
-                <input class="filter-input" type="checkbox" id="слайдер" name="specialities" value="слайдер" checked>
-                <label for="слайдер" class="feature-item">Cлайдер</label>
-              </li>
-              <li class="filter-option">
-                <input type="checkbox" id="блок преимуществ" name="specialities" value="блок преимуществ">
-                <label for="блок преимуществ" class="feature-item">Блок преимуществ</label>
-              </li>
-              <li class="filter-option">
-                <input type="checkbox" id="новости" name="specialities" value="новости" checked>
-                <label for="новости" class="feature-item">Hовости</label>
-              </li>
-              <li class="filter-option">
-                <input type="checkbox" id="Галерея" name="specialities" value="Галерея">
-                <label for="Галерея" class="feature-item">Галерея</label>
-              </li>
-              <li class="filter-option">
-                <input type="checkbox" id="корзина" name="specialities" value="корзина">
-                <label for="корзина" class="feature-item">Корзина</label>
-              </li>
-            </ul>
-          </div>
-          <a class="button button-grey" href="#">Показать</a>
+      <fieldset class="filters-grids">
+        <h3 class="header-size-5">Сетка:</h3>
+        <ul class="filter-grids__list">
+          <li class="filter-grids__option">
+            <input class="filter-grids__input" type="radio" id="адаптивная" name="grid" value="адаптивная" checked>
+            <label class="filter-grids__label" for="адаптивная">Адаптивная</label>
+          </li>
+          <li class="filter-grids__option">
+            <input class="filter-grids__input" type="radio" id="фиксированная" name="grid" value="фиксированная">
+            <label class="filter-grids__label" for="фиксированная">Фиксированная</label>
+          </li>
+          <li class="filter-grids__option">
+            <input class="filter-grids__input" type="radio" id="резиновая" name="grid" value="резиновая">
+            <label class="filter-grids__label" for="резиновая">Резиновая</label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset class="filters-features">
+        <h3 class="header-size-5">Особенности:</h3>
+        <ul class="filter-features__list">
+          <li class="filter-features__option">
+            <input class="filter-features__input" type="checkbox" id="слайдер" name="specialities" value="слайдер"
+                   checked>
+            <label for="слайдер" class="filter-features__label">Cлайдер</label>
+          </li>
+          <li class="filter-features__option">
+            <input class="filter-features__input" type="checkbox" id="блок преимуществ" name="specialities"
+                   value="блок преимуществ">
+            <label for="блок преимуществ" class="filter-features__label">Блок преимуществ</label>
+          </li>
+          <li class="filter-features__option">
+            <input class="filter-features__input" type="checkbox" id="новости" name="specialities" value="новости"
+                   checked>
+            <label for="новости" class="filter-features__label">Hовости</label>
+          </li>
+          <li class="filter-features__option">
+            <input class="filter-features__input" type="checkbox" id="Галерея" name="specialities" value="Галерея">
+            <label for="Галерея" class="filter-features__label">Галерея</label>
+          </li>
+          <li class="filter-features__option">
+            <input class="filter-features__input" type="checkbox" id="корзина" name="specialities" value="корзина">
+            <label for="корзина" class="filter-features__label">Корзина</label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <a class="button button-grey filter-grids__button" href="#">Показать</a>
     </aside>
 
     <section class="goods">
@@ -117,32 +114,115 @@
           <li class="slider-1">по цене</li>
           <li class="slider-2">по типу</li>
           <li class="slider-3">по названию</li>
-          <div class="icon-up-down">
+          <li class="icon-up-down">
             <a class="slider-4" href="#">
-              <img class="icon-down-dir" src="img/icon-down-dir.svg" width="11" height="10"></a>
+              <img class="icon-down-dir" src="img/icon-down-dir.svg" width="11" height="10"
+                   alt="иконка для слайдера вниз"></a>
             <a class="slider-5" href="#">
-              <img class="icon-up-dir" src="img/icon-up-dir.svg" width="11" height="10"></a>
-          </div>
+              <img class="icon-up-dir" src="img/icon-up-dir.svg" width="11" height="10" alt="иконка для слайдера вверх"></a>
+          </li>
         </ul>
       </div>
 
-      <ul class="catalog-list">
-        <li><img src="img/img-sedona-jpg.jpg" width="360" height="576" class="catalog-item img-sedonajpg" alt=""></li>
-        <li><img src="img/img-pink-jpg.jpg" width="360" height="576" class="catalog-item img-pinkjpg" alt=""></li>
-        <li><img src="img/img-barbershop-jpg.jpg" width="360" height="576" class="catalog-item img-barbershopjpg"
-                 alt=""></li>
-        <li><img src="img/img-mishka-jpg.jpg" width="360" height="576" class="catalog-item img-mishkajpg" alt=""></li>
-        <li><img src="img/img-aplus-jpg.jpg" width="360" height="576" class="catalog-item img-aplusjpg" alt=""></li>
-        <li><img src="img/img-kvast-jpg.jpg" width="360" height="576" class="catalog-item img-kvastjpg" alt=""></li>
+      <section class="patterns"></section>
+      <ul class="pattern-list">
+        <li class="pattern-item">
+          <div class="pattern-item__container">
+            <img src="img/img-sedona-jpg.jpg" width="360" height="576" class="patterm-img img-sedonajpg"
+                 alt="Шаблон сайта для путшествий Седонна">
+            <div class="pattern-item__info">
+                <h5 class="header-size-5 pattern-item__link">
+                  <a href="#">Sedona</a>
+                </h5>
+              <p class="pattern-item__definition definition-sedona">Информационный сайт для туристов</p>
+              <a href="#" class="button button-red pattern-item__button">9 900 руб.</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="pattern-item">
+          <div class="pattern-item__container">
+            <img src="img/img-pink-jpg.jpg" width="360" height="576"
+                 class="patterm-img img-pinkjpg" alt="Шаблон приложения Pink">
+            <div class="pattern-item__info">
+                <h5 class="header-size-5 pattern-item__link">
+                  <a href="#">Pink App</a>
+                </h5>
+              <p class="pattern-item__definition definition-pinkapp">Продуктовый лендинг приложения для iOS и
+                Android</p>
+              <a href="#" class="button button-red pattern-item__button">9 900 руб.</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="pattern-item">
+          <div class="pattern-item__container">
+            <img src="img/img-barbershop-jpg.jpg" width="360" height="576"
+                 class="patterm-img img-barbershopjpg" alt="Шаблон Барбершопа Бородинский>">
+            <div class="pattern-item__info">
+                <h5 class="header-size-5 pattern-item__link">
+                  <a href="#">Barbershop</a>
+                </h5>
+              <p class="pattern-item__definition definition-barbershop">Сайт салона красоты. Для мужчин, да.</p>
+              <a href="#" class="button button-red pattern-item__button">9 900 руб.</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="pattern-item">
+          <div class="pattern-item__container">
+            <img src="img/img-mishka-jpg.jpg" width="360" height="576"
+                 class="patterm-img img-mishkajpg" alt="Шаблон магазина вязаных товаров Мишка">
+            <div class="pattern-item__info">
+                <h5 class="header-size-5 pattern-item__link">
+                  <a href="#">MISHKA</a>
+                </h5>
+              <p class="pattern-item__definition definition-mishka">Интернет-магазин вязаных игрушек.</p>
+              <a href="#" class="button button-red pattern-item__button">9 900 руб.</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="pattern-item">
+          <div class="pattern-item__container">
+            <img src="img/img-aplus-jpg.jpg" width="360" height="576"
+                 class="patterm-img img-aplusjpg" alt="Шаблон курсов a Plus">
+            <div class="pattern-item__info">
+                <h5 class="header-size-5 pattern-item__link">
+                  <a href="#">a Plus</a>
+                </h5>
+              <p class="pattern-item__definition definition-aplus">Лендинг курсов повышения квалификации.</p>
+              <a href="#" class="button button-red">9 900 руб.</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="pattern-item">
+          <div class="pattern-item__container">
+            <img src="img/img-kvast-jpg.jpg" width="360" height="576"
+                 class="patterm-img img-kvastjpg" alt="Шаблон магазина крафтового кваса Кваст">
+            <div class="pattern-item__info">
+                <h5 class="header-size-5 pattern-item__link">
+                  <a href="#">Кваст</a>
+                </h5>
+              <p class="pattern-item__definition definition-kvast">Промо-сайт производителя крафтового кваса</p>
+              <a href="#" class="button button-red pattern-item__button">9 900 руб.</a>
+            </div>
+          </div>
+        </li>
       </ul>
 
       <div class="paginator">
-        <a class="current" href="#">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">Следующая</a>
+        <ul class="paginator__list">
+          <li class="paginator__item"><a class="button paginator-button paginator-current" href="#">1</a></li>
+          <li class="paginator__item"><a class="button paginator-button" href="#">2</a></li>
+          <li class="paginator__item"><a class="button paginator-button" href="#">3</a></li>
+          <li class="paginator__item"><a class="button paginator-button paginator-next" href="#">Следующая</a></li>
+        </ul>
       </div>
+
     </section>
+
   </div>
 
 
@@ -156,7 +236,7 @@
       </p>
       <button class="button button-red" type="button">Напишите нам</button>
     </div>
-    <img class="map-marker" src="img/map-marker.png" width="231" height="190">
+    <img class="map-marker" src="img/map-marker.png" width="231" height="190" alt="иконка для поиска на карте">
   </section>
 
 </main>
@@ -166,21 +246,21 @@
     <li class="social-list">
       <div class="social-button-icon">
         <a class="social social-vk" href="#" aria-label="Вконтакте">
-          <img class="icon vk-icon" src="img/vk-icon.svg" width="26" height="15">
+          <img class="icon vk-icon" src="img/vk-icon.svg" width="26" height="15" alt="иконка вконтакте">
         </a>
       </div>
     </li>
     <li>
       <div class="social-button-icon">
         <a class="social social-fb" href="#" aria-label="Фейсбук">
-          <img class="icon fb-icon" src="img/fb-icon.svg" width="12" height="22">
+          <img class="icon fb-icon" src="img/fb-icon.svg" width="12" height="22" alt="иконка фейсбук">
         </a>
       </div>
     </li>
     <li>
       <div class="social-button-icon">
         <a class="social social-inst" href="#" aria-label="Инстаграм">
-          <img class="icon insta-icon" src="img/insta-icon.svg" width="21" height="21">
+          <img class="icon insta-icon" src="img/insta-icon.svg" width="21" height="21" alt="иконка инстаграм">
         </a>
       </div>
     </li>
@@ -212,7 +292,7 @@
     <div class="modal-item modal-item-big">
       <label>
         Текст письма:
-        <textarea  name="text" rows="5" placeholder="В свободной форме"></textarea>
+        <textarea name="text" rows="5" placeholder="В свободной форме"></textarea>
       </label>
     </div>
     <input class="button button-red button-modal" type="submit" value="Отправить">
@@ -220,7 +300,6 @@
     <span class="visually-hidden">Закрыть</span>
   </form>
 </section>
-
 
 
 </body>

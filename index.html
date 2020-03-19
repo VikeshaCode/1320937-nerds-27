@@ -5,7 +5,7 @@
   <title>Дизайн-студия "Нёрдс"</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap&subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/new_styles.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body>
@@ -37,23 +37,23 @@
       <p class="text-1">Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
       <input class="button button-red button-feature-item" type="button" value="Узнать больше">
     </div>
-    <img class="slide-picture" src="img/slide-picture.png" width="698" height="413">
+    <img class="slide-picture" src="img/slide-picture.png" width="698" height="413" alt="слайдер">
   </section>
   <ul class="features-list">
     <li class="feature-item">
-      <img src="img/advantage-picture-red.png" width="300" height="146" class="advantage-picture-red">
+      <img src="img/advantage-picture-red.png" width="300" height="146" class="advantage-picture-red" alt="картинка веб-сайт">
       <h3 class="header-size-4">Веб-сайты</h3>
       <p class="text-1">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
       <a class="button button-red button-feature-item" href="#">Заказать</a>
     </li>
     <li class="feature-item">
-      <img src="img/advantage-picture-green.png" width="300" height="146" class="advantage-picture-green">
+      <img src="img/advantage-picture-green.png" width="300" height="146" class="advantage-picture-green" alt="картинка приложения">
       <h3 class="header-size-4">Приложения</h3>
       <p class="text-1">Покорите топ-10 приложений в AppStore и Google Play</p>
       <a class="button button-green button-feature-item" href="#">Заказать</a>
     </li>
     <li class="feature-item">
-      <img src="img/advantage-picture-yellow.png" width="300" height="146" class="advantage-picture-yellow">
+      <img src="img/advantage-picture-yellow.png" width="300" height="146" class="advantage-picture-yellow" alt="картинка презентация">
       <h3 class="header-size-4">Презентации</h3>
       <p class="text-1">Вы даже не подозреваете, насколько вы изумительны!</p>
       <a class="button button-yellow button-feature-item" href="#">Заказать</a>
@@ -78,7 +78,7 @@
     </div>
 
     <div class="counter-wrapper">
-      <img src="img/nerds-picture.jpg" width="360" height="208" class="nerds-picture">
+      <img src="img/nerds-picture.jpg" width="360" height="208" class="nerds-picture" alt="Логотип Нердс">
       <h4 class="text-1 text-1_bold">с 2004 года Любим точность во всем:</h4>
       <ul class="counter-list">
         <li>
@@ -102,19 +102,19 @@
   <div>
     <ul class="partners">
       <li>
-        <img src="img/htmlacdemy-logo.png" width="199" height="68" class="partners-logo">
+        <img class="partners-logo" src="img/htmlacdemy-logo.png" width="199" height="68" alt="Логотип партнера-HTML Academy">
       </li>
       <div class="small-divider"></div>
       <li>
-        <img src="img/borodinsli-logo.png" width="209" height="90" class="partners-logo">
+        <img class="partners-logo" src="img/borodinsli-logo.png" width="209" height="90" alt="Логотип партнера-Барбершоп Бородинский">
       </li>
       <div class="small-divider"></div>
       <li>
-        <img src="img/pink-logo.png" width="185" height="52" class="partners-logo">
+        <img class="partners-logo" src="img/pink-logo.png" width="185" height="52" alt="Логотип партнера-приложение Pink">
       </li>
       <div class="small-divider"></div>
       <li>
-        <img src="img/mishka-logo.png" width="173" height="84" class="partners-logo">
+        <img class="partners-logo" src="img/mishka-logo.png" width="173" height="84" alt="Логотип партнера-магазин Мишка">
       </li>
     </ul>
   </div>
@@ -129,10 +129,12 @@
       <p>
         <a class="text-2 text-2_grey" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
       </p>
-      <a class="button button-red modal-link" href="modal.html">Напишите нам</a>
+      <button class="button button-red" type="button">Напишите нам</button>
+    </div>
+    <img class="map-marker" src="img/map-marker.png" width="231" height="190" alt="иконка для поиска на карте">
+  </section>
 
-
-<!--
+  <!--
       <script>
         var link = document.querySelector(".modal-link");
 
@@ -143,10 +145,6 @@
       </script>
 -->
 
-    </div>
-    <img class="map-marker" src="img/map-marker.png" width="231" height="190">
-  </section>
-
 </main>
 
 <footer class="main-footer">
@@ -154,21 +152,21 @@
     <li class="social-list">
       <div class="social-button-icon">
         <a class="social social-vk" href="#" aria-label="Вконтакте">
-          <img class="icon vk-icon" src="img/vk-icon.svg" width="26" height="15">
+          <img class="icon vk-icon" src="img/vk-icon.svg" width="26" height="15" alt="иконка вконтакте">
         </a>
       </div>
     </li>
     <li>
       <div class="social-button-icon">
         <a class="social social-fb" href="#" aria-label="Фейсбук">
-          <img class="icon fb-icon" src="img/fb-icon.svg" width="12" height="22">
+          <img class="icon fb-icon" src="img/fb-icon.svg" width="12" height="22" alt="иконка фейсбук">
         </a>
       </div>
     </li>
     <li>
       <div class="social-button-icon">
         <a class="social social-inst" href="#" aria-label="Инстаграм">
-          <img class="icon insta-icon" src="img/insta-icon.svg" width="21" height="21">
+          <img class="icon insta-icon" src="img/insta-icon.svg" width="21" height="21" alt="иконка инстаграм">
         </a>
       </div>
     </li>
@@ -218,54 +216,3 @@
 </body>
 </html>
 
-
-<!--<form class="catalog-filter-form" method="get" action="https://echo.htmlacademy.ru">
-  <fieldset class="filter-item filter-price">
-    <legend>Стоимость:</legend>
-
-    <div class="range-filter">
-      <div class="range-controls">
-        <div class="scale">
-          <div class="bar"></div>
-        </div>
-        <div class="toggle toggle-min"></div>
-        <div class="toggle toggle-max"></div>
-      </div>
-      <div class="price-controls">
-        <label class="min-price">от <input name="min-price" type="text" value="0"></label>
-        <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
-      </div>
-    </div>
-
-    <fieldset class="filter-item filter-radio">
-        <legend>Сетка:</legend>
-        <ul>
-          <li class="filter-option">
-            <input class="filter-input filter-input-radio" type="radio" name="grid-group" value="yes" id="filter-adaptive" checked>
-            <label class="filter-label" for="filter-adaptive">Адаптивная</label>
-          </li>
-
-     <li class="filter-option">
-            <input class="filter-input filter-input-radio" type="radio" name="grid-group" value="no" id="filter-fixed">
-            <label class="filter-label" for="filter-fixed">Фиксированная</label>
-
-       <li class="filter-option">
-            <input class="filter-input filter-input-radio" type="radio" name="grid-group" value="no" id="filter-fluid">
-            <label class="filter-label" for="filter-fluid">Резиновая</label>
-
-
-             <fieldset class="filter-item filter-checkbox">
-        <legend>Особенности:</legend>
-        <ul>
-          <li class="filter-option">
-            <input class="filter-input filter-input-checkbox" type="checkbox" name="slider" id="filter-slider" checked>
-            <label class="filter-label" for="filter-slider">Слайдер</label>
-
-          <li class="filter-option">
-            <input class="filter-input filter-input-checkbox" type="checkbox" name="block" id="filter-block">
-            <label class="filter-label" for="filter-block">Блок преимуществ</label>
-
-         <li class="filter-option">
-            <input class="filter-input filter-input-checkbox" type="checkbox" name="news" id="filter-news" checked>
-            <label class="filter-label" for="filter-news">Новости</label>
--->
