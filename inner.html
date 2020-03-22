@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Дизайн-студия "Нёрдс"</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap&subset=cyrillic" rel="stylesheet">
-  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/normalize.min.css" rel="stylesheet">
   <link href="css/styles.min.css" rel="stylesheet">
 </head>
 <body>
@@ -20,8 +20,8 @@
     <ul class="site-navigation">
       <li><a href="index.html">Студия</a></li>
       <li><a href="customers.html">Клиенты</a></li>
-      <li><a class="active-link" href="inner.html">Магазин</a></li>
-      <li><a href="contacts.html">Контакты</a></li>
+      <li class="selected-link"><a href="inner.html">Магазин</a></li>
+      <li><a href="#contacts">Контакты</a></li>
     </ul>
     <ul class="user-navigation">
       <li>
@@ -32,10 +32,9 @@
   <h1 class="header-size-1 header-inner">Магазин готовых шаблонов</h1>
 </header>
 
-
-<main>
-  <div class="catalog-columns">
-    <aside class="filters">
+<main class="catalog-columns">
+  <section class="filters">
+    <form class="filter" action="https://echo.htmlacademy.ru" method="get">
       <div>
         <h3 class="header-size-5">Стоимость:</h3>
         <div class="filter-price">
@@ -59,7 +58,7 @@
       </div>
 
       <fieldset class="filters-grids">
-        <h3 class="header-size-5">Сетка:</h3>
+        <h3 class="header-size-5 filter-grids__title">Сетка:</h3>
         <ul class="filter-grids__list">
           <li class="filter-grids__option">
             <input class="filter-grids__input" type="radio" id="адаптивная" name="grid" value="адаптивная" checked>
@@ -77,7 +76,7 @@
       </fieldset>
 
       <fieldset class="filters-features">
-        <h3 class="header-size-5">Особенности:</h3>
+        <h3 class="header-size-5 filters-features__title">Особенности:</h3>
         <ul class="filter-features__list">
           <li class="filter-features__option">
             <input class="filter-features__input" type="checkbox" id="слайдер" name="specialities" value="слайдер"
@@ -104,143 +103,144 @@
           </li>
         </ul>
       </fieldset>
-
-      <a class="button button-grey filter-grids__button" href="#">Показать</a>
-    </aside>
-
-    <section class="goods">
-      <div class="sort-container">
-        <p class="header-size-5">Сортировать:</p>
-        <ul class="slider">
-          <li class="slider-1">по цене</li>
-          <li class="slider-2">по типу</li>
-          <li class="slider-3">по названию</li>
-          <li class="icon-up-down">
-            <a class="slider-4" href="#">
-              <img class="icon-down-dir" src="img/icon-down-dir.svg" width="11" height="10"
-                   alt="иконка для слайдера вниз"></a>
-            <a class="slider-5" href="#">
-              <img class="icon-up-dir" src="img/icon-up-dir.svg" width="11" height="10" alt="иконка для слайдера вверх"></a>
-          </li>
-        </ul>
-      </div>
-
-      <section class="patterns">
-        <ul class="pattern-list">
-          <li class="pattern-item">
-            <div class="pattern-item__container">
-              <img src="img/img-sedona-jpg.jpg" width="360" height="576" class="patterm-img img-sedonajpg"
-                   alt="Шаблон сайта для путшествий Седонна">
-              <div class="pattern-item__info">
-                <h5 class="header-size-5 pattern-item__link">
-                  <a href="#">Sedona</a>
-                </h5>
-                <p class="pattern-item__definition definition-sedona">Информационный сайт для туристов</p>
-                <a href="#" class="button button-red pattern-item__button">9 900 руб.</a>
-              </div>
-            </div>
-          </li>
-
-          <li class="pattern-item">
-            <div class="pattern-item__container">
-              <img src="img/img-pink-jpg.jpg" width="360" height="576"
-                   class="patterm-img img-pinkjpg" alt="Шаблон приложения Pink">
-              <div class="pattern-item__info">
-                <h5 class="header-size-5 pattern-item__link">
-                  <a href="#">Pink App</a>
-                </h5>
-                <p class="pattern-item__definition definition-pinkapp">Продуктовый лендинг приложения для iOS и
-                  Android</p>
-                <a href="#" class="button button-red pattern-item__button">9 900 руб.</a>
-              </div>
-            </div>
-          </li>
-
-          <li class="pattern-item">
-            <div class="pattern-item__container">
-              <img src="img/img-barbershop-jpg.jpg" width="360" height="576"
-                   class="patterm-img img-barbershopjpg" alt="Шаблон Барбершопа Бородинский>">
-              <div class="pattern-item__info">
-                <h5 class="header-size-5 pattern-item__link">
-                  <a href="#">Barbershop</a>
-                </h5>
-                <p class="pattern-item__definition definition-barbershop">Сайт салона красоты. Для мужчин, да.</p>
-                <a href="#" class="button button-red pattern-item__button">9 900 руб.</a>
-              </div>
-            </div>
-          </li>
-
-          <li class="pattern-item">
-            <div class="pattern-item__container">
-              <img src="img/img-mishka-jpg.jpg" width="360" height="576"
-                   class="patterm-img img-mishkajpg" alt="Шаблон магазина вязаных товаров Мишка">
-              <div class="pattern-item__info">
-                <h5 class="header-size-5 pattern-item__link">
-                  <a href="#">MISHKA</a>
-                </h5>
-                <p class="pattern-item__definition definition-mishka">Интернет-магазин вязаных игрушек.</p>
-                <a href="#" class="button button-red pattern-item__button">9 900 руб.</a>
-              </div>
-            </div>
-          </li>
-
-          <li class="pattern-item">
-            <div class="pattern-item__container">
-              <img src="img/img-aplus-jpg.jpg" width="360" height="576"
-                   class="patterm-img img-aplusjpg" alt="Шаблон курсов a Plus">
-              <div class="pattern-item__info">
-                <h5 class="header-size-5 pattern-item__link">
-                  <a href="#">a Plus</a>
-                </h5>
-                <p class="pattern-item__definition definition-aplus">Лендинг курсов повышения квалификации.</p>
-                <a href="#" class="button button-red">9 900 руб.</a>
-              </div>
-            </div>
-          </li>
-
-          <li class="pattern-item">
-            <div class="pattern-item__container">
-              <img src="img/img-kvast-jpg.jpg" width="360" height="576"
-                   class="patterm-img img-kvastjpg" alt="Шаблон магазина крафтового кваса Кваст">
-              <div class="pattern-item__info">
-                <h5 class="header-size-5 pattern-item__link">
-                  <a href="#">Кваст</a>
-                </h5>
-                <p class="pattern-item__definition definition-kvast">Промо-сайт производителя крафтового кваса</p>
-                <a href="#" class="button button-red pattern-item__button">9 900 руб.</a>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </section>
-
-      <div class="paginator">
-        <ul class="paginator__list">
-          <li class="paginator__item"><a class="button paginator-button paginator-current" href="#">1</a></li>
-          <li class="paginator__item"><a class="button paginator-button" href="#">2</a></li>
-          <li class="paginator__item"><a class="button paginator-button" href="#">3</a></li>
-          <li class="paginator__item"><a class="button paginator-button paginator-next" href="#">Следующая</a></li>
-        </ul>
-      </div>
-
-    </section>
-
-  </div>
-
-
-  <section class="contacts">
-    <div class="info">
-      <h2 class="header-size-5">NЁRDS DESIGN STUDIO</h2>
-      <p class="text-2 text-2_grey">191186, Санкт-Петербург,<br>
-        ул. Б. Конюшенная, д. 19/8</p>
-      <p>
-        <a class="text-2 text-2_grey" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
-      </p>
-      <button class="button button-red" type="button">Напишите нам</button>
-    </div>
-    <img class="map-marker" src="img/map-marker.png" width="231" height="190" alt="иконка для поиска на карте">
+      <button type="submit" class="button button-grey filter-grids__button">Показать</button>
+    </form>
   </section>
 
+
+  <section class="goods">
+    <div class="sort-container">
+      <p class="header-size-5">Сортировать:</p>
+      <ul class="slider">
+        <li class="slider-1">по цене</li>
+        <li class="slider-2">по типу</li>
+        <li class="slider-3">по названию</li>
+        <li class="slider-4">
+          <a href="#">
+            <img src="img/icon-down-dir.svg" width="11" height="10"
+                 alt="иконка для слайдера вниз"></a>
+        </li>
+        <li class="slider-5">
+          <a href="#">
+            <img src="img/icon-up-dir.svg" width="11" height="10"
+                 alt="иконка для слайдера вверх"></a>
+        </li>
+      </ul>
+    </div>
+
+    <section class="patterns">
+      <ul class="pattern-list">
+        <li class="pattern-item">
+          <div class="pattern-item__container">
+            <img src="img/img-sedona-jpg.jpg" width="360" height="576" class="patterm-img img-sedonajpg"
+                 alt="Шаблон сайта для путшествий Седонна">
+            <div class="pattern-item__info">
+              <h5 class="header-size-5 pattern-item__link">
+                <a href="#">Sedona</a>
+              </h5>
+              <p class="pattern-item__definition definition-sedona">Информационный сайт для туристов</p>
+              <a href="#" class="button button-red pattern-item__button">9 900 руб.</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="pattern-item">
+          <div class="pattern-item__container">
+            <img src="img/img-pink-jpg.jpg" width="360" height="576"
+                 class="patterm-img img-pinkjpg" alt="Шаблон приложения Pink">
+            <div class="pattern-item__info">
+              <h5 class="header-size-5 pattern-item__link">
+                <a href="#">Pink App</a>
+              </h5>
+              <p class="pattern-item__definition definition-pinkapp">Продуктовый лендинг приложения для iOS и
+                Android</p>
+              <a href="#" class="button button-red pattern-item__button">9 900 руб.</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="pattern-item">
+          <div class="pattern-item__container">
+            <img src="img/img-barbershop-jpg.jpg" width="360" height="576"
+                 class="patterm-img img-barbershopjpg" alt="Шаблон Барбершопа Бородинский>">
+            <div class="pattern-item__info">
+              <h5 class="header-size-5 pattern-item__link">
+                <a href="#">Barbershop</a>
+              </h5>
+              <p class="pattern-item__definition definition-barbershop">Сайт салона красоты. Для мужчин, да.</p>
+              <a href="#" class="button button-red pattern-item__button">9 900 руб.</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="pattern-item">
+          <div class="pattern-item__container">
+            <img src="img/img-mishka-jpg.jpg" width="360" height="576"
+                 class="patterm-img img-mishkajpg" alt="Шаблон магазина вязаных товаров Мишка">
+            <div class="pattern-item__info">
+              <h5 class="header-size-5 pattern-item__link">
+                <a href="#">MISHKA</a>
+              </h5>
+              <p class="pattern-item__definition definition-mishka">Интернет-магазин вязаных игрушек.</p>
+              <a href="#" class="button button-red pattern-item__button">9 900 руб.</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="pattern-item">
+          <div class="pattern-item__container">
+            <img src="img/img-aplus-jpg.jpg" width="360" height="576"
+                 class="patterm-img img-aplusjpg" alt="Шаблон курсов a Plus">
+            <div class="pattern-item__info">
+              <h5 class="header-size-5 pattern-item__link">
+                <a href="#">a Plus</a>
+              </h5>
+              <p class="pattern-item__definition definition-aplus">Лендинг курсов повышения квалификации.</p>
+              <a href="#" class="button button-red">9 900 руб.</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="pattern-item">
+          <div class="pattern-item__container">
+            <img src="img/img-kvast-jpg.jpg" width="360" height="576"
+                 class="patterm-img img-kvastjpg" alt="Шаблон магазина крафтового кваса Кваст">
+            <div class="pattern-item__info">
+              <h5 class="header-size-5 pattern-item__link">
+                <a href="#">Кваст</a>
+              </h5>
+              <p class="pattern-item__definition definition-kvast">Промо-сайт производителя крафтового кваса</p>
+              <a href="#" class="button button-red pattern-item__button">9 900 руб.</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <div class="paginator">
+      <ul class="paginator__list">
+        <li class="paginator__item"><a class="button button-grey paginator-button paginator-current" href="#">1</a></li>
+        <li class="paginator__item"><a class="button  button-grey paginator-button" href="#">2</a></li>
+        <li class="paginator__item"><a class="button  button-grey paginator-button" href="#">3</a></li>
+        <li class="paginator__item"><a class="button button-grey paginator-button paginator-next" href="#">Следующая</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+
+<section id="contacts" class="contacts">
+  <div class="info">
+    <h2 class="header-size-5">NЁRDS DESIGN STUDIO</h2>
+    <p class="text-2 text-2_grey">191186, Санкт-Петербург,<br>
+      ул. Б. Конюшенная, д. 19/8</p>
+    <p>
+      <a class="text-2 text-2_grey" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+    </p>
+    <button class="button button-red" type="button">Напишите нам</button>
+  </div>
+  <img class="map-marker" src="img/map-marker.png" width="231" height="190" alt="иконка для поиска на карте">
+</section>
 </main>
 
 <footer class="main-footer">
@@ -276,7 +276,7 @@
 
 <section class="modal">
   <h2>Напишите нам</h2>
-  <form class="login-form" action="#" method="post">
+  <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
     <div class="modal-item">
       <label>
         Ваше имя:
